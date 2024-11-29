@@ -5,7 +5,9 @@ sudo docker compose up -d
 Logs:
 sudo docker compose logs -f
 sudo docker compose logs geth -f
+https://github.com/Kryptos4Ever/Docker/blob/main/Logs/geth.log
 sudo docker compose logs beacon -f
+https://github.com/Kryptos4Ever/Docker/blob/main/Logs/beacon.log
 
 docker logs --tail 50 geth
 docker logs --tail 50 beacon
