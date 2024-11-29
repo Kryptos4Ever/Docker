@@ -1,0 +1,25 @@
+version: "3.8"
+
+services:
+  linea:
+    image: linea/linea-execution:latest
+    container_name: linea
+    restart: unless-stopped
+    ports:
+      - "8545:8545"  # RPC
+      - "30303:30303" # P2P
+    volumes:
+      - type: bind
+        source: /mnt/disco/linea
+        target: /root/.linea
+    command:
+      - --syncmode=light
+      - --http
+      - --http.addr=0.0.0.0
+      - --http.api=eth,net
+      - --http.corsdomain="*"
+      - --cache=256
+      - --maxpeers=25
+      - --txlookuplimit=0
+      - --state.scheme=path
+      - --nodiscover

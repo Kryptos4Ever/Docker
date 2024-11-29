@@ -1,0 +1,81 @@
+version: "3.8"
+
+networks:
+  ethereum:
+    name: ethereum
+
+services:
+  geth:
+    networks:
+      - ethereum
+    image: ethereum/client-go:latest
+    container_name: geth
+    restart: unless-stopped
+    stop_grace_period: 2m
+    mem_limit: 1g
+    mem_reservation: 512m
+    ports:
+      - "30303:30303"
+      - "8545:8545" 
+      - "8551:8551"
+    volumes:
+      - type: bind
+        source: /mnt/disco/ethereum/geth
+        target: /root/.ethereum
+      - type: bind
+        source: /mnt/disco/ethereum/jwt.hex
+        target: /root/.ethereum/geth/jwtsecret
+        read_only: true
+    command:
+      - --syncmode=snap
+      - --http
+      - --http.addr=0.0.0.0
+      - --http.api=eth,net,web3,engine
+      - --http.corsdomain=*
+      - --cache=512
+      - --snapshot=true
+      - --maxpeers=30
+      - --db.engine=pebble
+      - --authrpc.addr=0.0.0.0
+      - --authrpc.port=8551
+      - --authrpc.vhosts=*
+      - --authrpc.jwtsecret=/root/.ethereum/geth/jwtsecret
+
+  beacon:
+    networks:
+      - ethereum
+    image: sigp/lighthouse:latest
+    container_name: beacon
+    restart: unless-stopped
+    stop_grace_period: 2m
+    mem_limit: 1g
+    mem_reservation: 512m
+    depends_on:
+      - geth
+    ports:
+      - "9000:9000"
+      - "5052:5052"
+    volumes:
+      - type: bind
+        source: /mnt/disco/ethereum/beacon
+        target: /root/.lighthouse
+      - type: bind
+        source: /mnt/disco/ethereum/jwt.hex
+        target: /root/.lighthouse/jwt.hex
+        read_only: true
+    command:
+      - lighthouse
+      - bn
+      - --network=mainnet
+      - --execution-endpoint=http://geth:8551
+      - --execution-jwt=/root/.lighthouse/jwt.hex
+      - --checkpoint-sync-url=https://sync-mainnet.beaconcha.in
+      - --checkpoint-sync-url-timeout=300
+      - --disable-deposit-contract-sync
+      - --slots-per-restore-point=8192
+      - --debug-level=info
+      - --http
+      - --http-address=0.0.0.0
+      - --http-api=lighthouse,eth
+      - --http-port=5052
+      - --http-allow-sync-stalled
