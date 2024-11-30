@@ -1,24 +1,4 @@
-bernardo@bernardo-Lenovo-B590:~/Docker$ sudo docker compose logs -f geth beacon
-beacon  | Nov 30 02:42:36.024 INFO Logging to file                         path: "/root/.lighthouse/mainnet/beacon/logs/beacon.log"
-beacon  | Nov 30 02:42:36.044 INFO Lighthouse started                      version: Lighthouse/v5.3.0-2e0eb6d
-beacon  | Nov 30 02:42:36.044 INFO Configured for network                  name: mainnet
-beacon  | Nov 30 02:42:36.045 INFO Data directory initialised              datadir: /root/.lighthouse/mainnet
-beacon  | Nov 30 02:42:36.058 INFO Deposit contract                        address: 0x00000000219ab540356cbb839cbe05303d7705fa, deploy_block: 11184524
-beacon  | Nov 30 02:42:39.018 INFO Hot-Cold DB initialized                 split_state: 0x8649d0e1e2949fd9ac644a2cc8d9d5e5fdb2d15e632d58092e0c919d6222f364, split_slot: 10503040, service: freezer_db
-beacon  | Nov 30 02:42:39.021 INFO Blob DB initialized                     oldest_blob_slot: Some(Slot(10483008)), path: "/root/.lighthouse/mainnet/beacon/blobs_db", service: freezer_db
-beacon  | Nov 30 02:42:39.463 INFO Refusing to checkpoint sync             msg: database already exists, use --purge-db to force checkpoint sync, service: beacon
-beacon  | Nov 30 02:42:39.463 INFO Starting beacon chain                   method: resume, service: beacon
-beacon  | Nov 30 02:43:57.391 INFO Block production disabled               reason: no eth1 backend configured
-beacon  | Nov 30 02:43:57.507 WARN State cache missed                      block_root: 0x4b5b215a8059ad9946341651ba451ad4a2fc76f1d92282d4bf9f6c05d52a526a, state_root: 0xb5aa19a39284e56df2376d87c50aa828dab03f8f4783ed047b4ce8282de6c95f, service: freezer_db
-beacon  | Nov 30 02:45:09.766 INFO Logging to file                         path: "/root/.lighthouse/mainnet/beacon/logs/beacon.log"
-beacon  | Nov 30 02:45:09.782 INFO Lighthouse started                      version: Lighthouse/v5.3.0-2e0eb6d
-beacon  | Nov 30 02:45:09.782 INFO Configured for network                  name: mainnet
-beacon  | Nov 30 02:45:09.783 INFO Data directory initialised              datadir: /root/.lighthouse/mainnet
-beacon  | Nov 30 02:45:09.796 INFO Deposit contract                        address: 0x00000000219ab540356cbb839cbe05303d7705fa, deploy_block: 11184524
-beacon  | Nov 30 02:45:10.465 INFO Hot-Cold DB initialized                 split_state: 0x8649d0e1e2949fd9ac644a2cc8d9d5e5fdb2d15e632d58092e0c919d6222f364, split_slot: 10503040, service: freezer_db
-beacon  | Nov 30 02:45:10.466 INFO Blob DB initialized                     oldest_blob_slot: Some(Slot(10483008)), path: "/root/.lighthouse/mainnet/beacon/blobs_db", service: freezer_db
-beacon  | Nov 30 02:45:10.616 INFO Refusing to checkpoint sync             msg: database already exists, use --purge-db to force checkpoint sync, service: beacon
-beacon  | Nov 30 02:45:10.616 INFO Starting beacon chain                   method: resume, service: beacon
+bernardo@bernardo-Lenovo-B590:~/Docker$ sudo docker compose logs -f
 geth    | INFO [11-30|02:42:35.444] Starting Geth on Ethereum mainnet...
 geth    | INFO [11-30|02:42:35.465] Maximum peer count                       ETH=30 total=30
 geth    | INFO [11-30|02:42:35.477] Smartcard socket not found, disabling    err="stat /run/pcscd/pcscd.comm: no such file or directory"
@@ -100,4 +80,117 @@ geth    | INFO [11-30|02:44:42.549] Looking for peers                        pee
 geth    | INFO [11-30|02:44:52.642] Looking for peers                        peercount=0 tried=54 static=0
 geth    | INFO [11-30|02:45:04.765] Looking for peers                        peercount=0 tried=26 static=0
 geth    | INFO [11-30|02:45:15.409] Looking for peers                        peercount=1 tried=62 static=0
-
+geth    | INFO [11-30|02:45:25.449] Looking for peers                        peercount=1 tried=23 static=0
+geth    | INFO [11-30|02:45:35.569] Looking for peers                        peercount=1 tried=44 static=0
+geth    | INFO [11-30|02:45:45.579] Looking for peers                        peercount=1 tried=22 static=0
+geth    | INFO [11-30|02:45:55.659] Looking for peers                        peercount=1 tried=16 static=0
+geth    | INFO [11-30|02:46:05.683] Looking for peers                        peercount=2 tried=25 static=0
+geth    | INFO [11-30|02:46:15.691] Looking for peers                        peercount=1 tried=39 static=0
+geth    | INFO [11-30|02:46:26.029] Looking for peers                        peercount=1 tried=28 static=0
+geth    | INFO [11-30|02:46:36.054] Looking for peers                        peercount=1 tried=25 static=0
+geth    | INFO [11-30|02:46:46.393] Looking for peers                        peercount=1 tried=27 static=0
+geth    | INFO [11-30|02:46:56.490] Looking for peers                        peercount=1 tried=27 static=0
+geth    | INFO [11-30|02:47:06.556] Looking for peers                        peercount=1 tried=23 static=0
+geth    | INFO [11-30|02:47:16.624] Looking for peers                        peercount=1 tried=30 static=0
+geth    | INFO [11-30|02:47:26.748] Looking for peers                        peercount=1 tried=28 static=0
+geth    | INFO [11-30|02:47:36.908] Looking for peers                        peercount=2 tried=25 static=0
+geth    | INFO [11-30|02:47:47.074] Looking for peers                        peercount=1 tried=26 static=0
+geth    | INFO [11-30|02:47:57.559] Looking for peers                        peercount=1 tried=31 static=0
+geth    | INFO [11-30|02:48:08.410] Looking for peers                        peercount=2 tried=35 static=0
+geth    | INFO [11-30|02:48:18.651] Looking for peers                        peercount=2 tried=33 static=0
+geth    | INFO [11-30|02:48:28.719] Looking for peers                        peercount=2 tried=45 static=0
+geth    | INFO [11-30|02:48:38.758] Looking for peers                        peercount=2 tried=22 static=0
+geth    | INFO [11-30|02:48:50.881] Looking for peers                        peercount=2 tried=40 static=0
+beacon  | Nov 30 02:42:36.024 INFO Logging to file                         path: "/root/.lighthouse/mainnet/beacon/logs/beacon.log"
+beacon  | Nov 30 02:42:36.044 INFO Lighthouse started                      version: Lighthouse/v5.3.0-2e0eb6d
+beacon  | Nov 30 02:42:36.044 INFO Configured for network                  name: mainnet
+beacon  | Nov 30 02:42:36.045 INFO Data directory initialised              datadir: /root/.lighthouse/mainnet
+beacon  | Nov 30 02:42:36.058 INFO Deposit contract                        address: 0x00000000219ab540356cbb839cbe05303d7705fa, deploy_block: 11184524
+beacon  | Nov 30 02:42:39.018 INFO Hot-Cold DB initialized                 split_state: 0x8649d0e1e2949fd9ac644a2cc8d9d5e5fdb2d15e632d58092e0c919d6222f364, split_slot: 10503040, service: freezer_db
+beacon  | Nov 30 02:42:39.021 INFO Blob DB initialized                     oldest_blob_slot: Some(Slot(10483008)), path: "/root/.lighthouse/mainnet/beacon/blobs_db", service: freezer_db
+beacon  | Nov 30 02:42:39.463 INFO Refusing to checkpoint sync             msg: database already exists, use --purge-db to force checkpoint sync, service: beacon
+beacon  | Nov 30 02:42:39.463 INFO Starting beacon chain                   method: resume, service: beacon
+beacon  | Nov 30 02:43:57.391 INFO Block production disabled               reason: no eth1 backend configured
+beacon  | Nov 30 02:43:57.507 WARN State cache missed                      block_root: 0x4b5b215a8059ad9946341651ba451ad4a2fc76f1d92282d4bf9f6c05d52a526a, state_root: 0xb5aa19a39284e56df2376d87c50aa828dab03f8f4783ed047b4ce8282de6c95f, service: freezer_db
+beacon  | Nov 30 02:45:09.766 INFO Logging to file                         path: "/root/.lighthouse/mainnet/beacon/logs/beacon.log"
+beacon  | Nov 30 02:45:09.782 INFO Lighthouse started                      version: Lighthouse/v5.3.0-2e0eb6d
+beacon  | Nov 30 02:45:09.782 INFO Configured for network                  name: mainnet
+beacon  | Nov 30 02:45:09.783 INFO Data directory initialised              datadir: /root/.lighthouse/mainnet
+beacon  | Nov 30 02:45:09.796 INFO Deposit contract                        address: 0x00000000219ab540356cbb839cbe05303d7705fa, deploy_block: 11184524
+beacon  | Nov 30 02:45:10.465 INFO Hot-Cold DB initialized                 split_state: 0x8649d0e1e2949fd9ac644a2cc8d9d5e5fdb2d15e632d58092e0c919d6222f364, split_slot: 10503040, service: freezer_db
+beacon  | Nov 30 02:45:10.466 INFO Blob DB initialized                     oldest_blob_slot: Some(Slot(10483008)), path: "/root/.lighthouse/mainnet/beacon/blobs_db", service: freezer_db
+beacon  | Nov 30 02:45:10.616 INFO Refusing to checkpoint sync             msg: database already exists, use --purge-db to force checkpoint sync, service: beacon
+beacon  | Nov 30 02:45:10.616 INFO Starting beacon chain                   method: resume, service: beacon
+beacon  | Nov 30 02:45:25.030 INFO Block production disabled               reason: no eth1 backend configured
+beacon  | Nov 30 02:45:25.170 WARN State cache missed                      block_root: 0x4b5b215a8059ad9946341651ba451ad4a2fc76f1d92282d4bf9f6c05d52a526a, state_root: 0xb5aa19a39284e56df2376d87c50aa828dab03f8f4783ed047b4ce8282de6c95f, service: freezer_db
+beacon  | Nov 30 02:45:57.691 INFO Logging to file                         path: "/root/.lighthouse/mainnet/beacon/logs/beacon.log"
+beacon  | Nov 30 02:45:57.706 INFO Lighthouse started                      version: Lighthouse/v5.3.0-2e0eb6d
+beacon  | Nov 30 02:45:57.706 INFO Configured for network                  name: mainnet
+beacon  | Nov 30 02:45:57.707 INFO Data directory initialised              datadir: /root/.lighthouse/mainnet
+beacon  | Nov 30 02:45:57.720 INFO Deposit contract                        address: 0x00000000219ab540356cbb839cbe05303d7705fa, deploy_block: 11184524
+beacon  | Nov 30 02:45:58.347 INFO Hot-Cold DB initialized                 split_state: 0x8649d0e1e2949fd9ac644a2cc8d9d5e5fdb2d15e632d58092e0c919d6222f364, split_slot: 10503040, service: freezer_db
+beacon  | Nov 30 02:45:58.349 INFO Blob DB initialized                     oldest_blob_slot: Some(Slot(10483008)), path: "/root/.lighthouse/mainnet/beacon/blobs_db", service: freezer_db
+beacon  | Nov 30 02:45:58.501 INFO Refusing to checkpoint sync             msg: database already exists, use --purge-db to force checkpoint sync, service: beacon
+beacon  | Nov 30 02:45:58.501 INFO Starting beacon chain                   method: resume, service: beacon
+beacon  | Nov 30 02:46:13.363 INFO Block production disabled               reason: no eth1 backend configured
+beacon  | Nov 30 02:46:13.486 WARN State cache missed                      block_root: 0x4b5b215a8059ad9946341651ba451ad4a2fc76f1d92282d4bf9f6c05d52a526a, state_root: 0xb5aa19a39284e56df2376d87c50aa828dab03f8f4783ed047b4ce8282de6c95f, service: freezer_db
+beacon  | Nov 30 02:46:44.334 INFO Logging to file                         path: "/root/.lighthouse/mainnet/beacon/logs/beacon.log"
+beacon  | Nov 30 02:46:44.351 INFO Lighthouse started                      version: Lighthouse/v5.3.0-2e0eb6d
+beacon  | Nov 30 02:46:44.351 INFO Configured for network                  name: mainnet
+beacon  | Nov 30 02:46:44.352 INFO Data directory initialised              datadir: /root/.lighthouse/mainnet
+beacon  | Nov 30 02:46:44.365 INFO Deposit contract                        address: 0x00000000219ab540356cbb839cbe05303d7705fa, deploy_block: 11184524
+beacon  | Nov 30 02:46:44.984 INFO Hot-Cold DB initialized                 split_state: 0x8649d0e1e2949fd9ac644a2cc8d9d5e5fdb2d15e632d58092e0c919d6222f364, split_slot: 10503040, service: freezer_db
+beacon  | Nov 30 02:46:44.985 INFO Blob DB initialized                     oldest_blob_slot: Some(Slot(10483008)), path: "/root/.lighthouse/mainnet/beacon/blobs_db", service: freezer_db
+beacon  | Nov 30 02:46:45.245 INFO Refusing to checkpoint sync             msg: database already exists, use --purge-db to force checkpoint sync, service: beacon
+beacon  | Nov 30 02:46:45.245 INFO Starting beacon chain                   method: resume, service: beacon
+beacon  | Nov 30 02:47:00.724 INFO Block production disabled               reason: no eth1 backend configured
+beacon  | Nov 30 02:47:00.811 WARN State cache missed                      block_root: 0x4b5b215a8059ad9946341651ba451ad4a2fc76f1d92282d4bf9f6c05d52a526a, state_root: 0xb5aa19a39284e56df2376d87c50aa828dab03f8f4783ed047b4ce8282de6c95f, service: freezer_db
+beacon  | Nov 30 02:47:31.667 INFO Logging to file                         path: "/root/.lighthouse/mainnet/beacon/logs/beacon.log"
+beacon  | Nov 30 02:47:31.694 INFO Lighthouse started                      version: Lighthouse/v5.3.0-2e0eb6d
+beacon  | Nov 30 02:47:31.695 INFO Configured for network                  name: mainnet
+beacon  | Nov 30 02:47:31.696 INFO Data directory initialised              datadir: /root/.lighthouse/mainnet
+beacon  | Nov 30 02:47:31.714 INFO Deposit contract                        address: 0x00000000219ab540356cbb839cbe05303d7705fa, deploy_block: 11184524
+beacon  | Nov 30 02:47:32.499 INFO Hot-Cold DB initialized                 split_state: 0x8649d0e1e2949fd9ac644a2cc8d9d5e5fdb2d15e632d58092e0c919d6222f364, split_slot: 10503040, service: freezer_db
+beacon  | Nov 30 02:47:32.501 INFO Blob DB initialized                     oldest_blob_slot: Some(Slot(10483008)), path: "/root/.lighthouse/mainnet/beacon/blobs_db", service: freezer_db
+beacon  | Nov 30 02:47:32.653 INFO Refusing to checkpoint sync             msg: database already exists, use --purge-db to force checkpoint sync, service: beacon
+beacon  | Nov 30 02:47:32.653 INFO Starting beacon chain                   method: resume, service: beacon
+beacon  | Nov 30 02:47:48.626 INFO Block production disabled               reason: no eth1 backend configured
+beacon  | Nov 30 02:47:48.738 WARN State cache missed                      block_root: 0x4b5b215a8059ad9946341651ba451ad4a2fc76f1d92282d4bf9f6c05d52a526a, state_root: 0xb5aa19a39284e56df2376d87c50aa828dab03f8f4783ed047b4ce8282de6c95f, service: freezer_db
+beacon  | Nov 30 02:48:16.881 INFO Logging to file                         path: "/root/.lighthouse/mainnet/beacon/logs/beacon.log"
+beacon  | Nov 30 02:48:16.897 INFO Lighthouse started                      version: Lighthouse/v5.3.0-2e0eb6d
+beacon  | Nov 30 02:48:16.898 INFO Configured for network                  name: mainnet
+beacon  | Nov 30 02:48:16.899 INFO Data directory initialised              datadir: /root/.lighthouse/mainnet
+beacon  | Nov 30 02:48:16.912 INFO Deposit contract                        address: 0x00000000219ab540356cbb839cbe05303d7705fa, deploy_block: 11184524
+beacon  | Nov 30 02:48:17.636 INFO Hot-Cold DB initialized                 split_state: 0x8649d0e1e2949fd9ac644a2cc8d9d5e5fdb2d15e632d58092e0c919d6222f364, split_slot: 10503040, service: freezer_db
+beacon  | Nov 30 02:48:17.639 INFO Blob DB initialized                     oldest_blob_slot: Some(Slot(10483008)), path: "/root/.lighthouse/mainnet/beacon/blobs_db", service: freezer_db
+beacon  | Nov 30 02:48:17.790 INFO Refusing to checkpoint sync             msg: database already exists, use --purge-db to force checkpoint sync, service: beacon
+beacon  | Nov 30 02:48:17.790 INFO Starting beacon chain                   method: resume, service: beacon
+beacon  | Nov 30 02:48:33.252 INFO Block production disabled               reason: no eth1 backend configured
+beacon  | Nov 30 02:48:33.342 WARN State cache missed                      block_root: 0x4b5b215a8059ad9946341651ba451ad4a2fc76f1d92282d4bf9f6c05d52a526a, state_root: 0xb5aa19a39284e56df2376d87c50aa828dab03f8f4783ed047b4ce8282de6c95f, service: freezer_db
+beacon  | Nov 30 02:48:57.197 INFO Logging to file                         path: "/root/.lighthouse/mainnet/beacon/logs/beacon.log"
+beacon  | Nov 30 02:48:57.230 INFO Lighthouse started                      version: Lighthouse/v5.3.0-2e0eb6d
+beacon  | Nov 30 02:48:57.230 INFO Configured for network                  name: mainnet
+beacon  | Nov 30 02:48:57.232 INFO Data directory initialised              datadir: /root/.lighthouse/mainnet
+beacon  | Nov 30 02:48:57.251 INFO Deposit contract                        address: 0x00000000219ab540356cbb839cbe05303d7705fa, deploy_block: 11184524
+beacon  | Nov 30 02:48:57.951 INFO Hot-Cold DB initialized                 split_state: 0x8649d0e1e2949fd9ac644a2cc8d9d5e5fdb2d15e632d58092e0c919d6222f364, split_slot: 10503040, service: freezer_db
+beacon  | Nov 30 02:48:57.952 INFO Blob DB initialized                     oldest_blob_slot: Some(Slot(10483008)), path: "/root/.lighthouse/mainnet/beacon/blobs_db", service: freezer_db
+beacon  | Nov 30 02:48:58.103 INFO Refusing to checkpoint sync             msg: database already exists, use --purge-db to force checkpoint sync, service: beacon
+beacon  | Nov 30 02:48:58.103 INFO Starting beacon chain                   method: resume, service: beacon
+beacon  | Nov 30 02:49:13.678 INFO Block production disabled               reason: no eth1 backend configured
+beacon  | Nov 30 02:49:13.767 WARN State cache missed                      block_root: 0x4b5b215a8059ad9946341651ba451ad4a2fc76f1d92282d4bf9f6c05d52a526a, state_root: 0xb5aa19a39284e56df2376d87c50aa828dab03f8f4783ed047b4ce8282de6c95f, service: freezer_db
+beacon exited with code 137
+geth    | WARN [11-30|02:49:41.335] Post-merge network, but no beacon client seen. Please launch one to follow the chain!
+beacon  | Nov 30 02:49:42.119 INFO Logging to file                         path: "/root/.lighthouse/mainnet/beacon/logs/beacon.log"
+beacon  | Nov 30 02:49:42.138 INFO Lighthouse started                      version: Lighthouse/v5.3.0-2e0eb6d
+beacon  | Nov 30 02:49:42.138 INFO Configured for network                  name: mainnet
+beacon  | Nov 30 02:49:42.139 INFO Data directory initialised              datadir: /root/.lighthouse/mainnet
+beacon  | Nov 30 02:49:42.153 INFO Deposit contract                        address: 0x00000000219ab540356cbb839cbe05303d7705fa, deploy_block: 11184524
+beacon  | Nov 30 02:49:42.933 INFO Hot-Cold DB initialized                 split_state: 0x8649d0e1e2949fd9ac644a2cc8d9d5e5fdb2d15e632d58092e0c919d6222f364, split_slot: 10503040, service: freezer_db
+beacon  | Nov 30 02:49:42.935 INFO Blob DB initialized                     oldest_blob_slot: Some(Slot(10483008)), path: "/root/.lighthouse/mainnet/beacon/blobs_db", service: freezer_db
+beacon  | Nov 30 02:49:43.195 INFO Refusing to checkpoint sync             msg: database already exists, use --purge-db to force checkpoint sync, service: beacon
+beacon  | Nov 30 02:49:43.195 INFO Starting beacon chain                   method: resume, service: beacon
+beacon  | Nov 30 02:49:57.734 INFO Block production disabled               reason: no eth1 backend configured
+beacon  | Nov 30 02:49:57.849 WARN State cache missed                      block_root: 0x4b5b215a8059ad9946341651ba451ad4a2fc76f1d92282d4bf9f6c05d52a526a, state_root: 0xb5aa19a39284e56df2376d87c50aa828dab03f8f4783ed047b4ce8282de6c95f, service: freezer_db
+^Z
+[7]+  Detenido                sudo docker compose logs -f
+bernardo@bernardo-Lenovo-B590:~/Docker$ 
