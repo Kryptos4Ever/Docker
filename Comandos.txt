@@ -9,8 +9,8 @@ https://github.com/Kryptos4Ever/Docker/blob/main/Logs/geth.log
 sudo docker compose logs beacon -f
 https://github.com/Kryptos4Ever/Docker/blob/main/Logs/beacon.log
 
-docker logs --tail 50 geth
-docker logs --tail 50 beacon
+sudo docker logs --tail 50 geth
+sudo docker logs --tail 50 beacon
 
 Uso de memoria:
 free -h

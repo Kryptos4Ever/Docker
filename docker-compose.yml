@@ -61,14 +61,14 @@ services:
         target: /root/.lighthouse
       - type: bind
         source: /mnt/disco/ethereum/jwt.hex
-        target: /root/.lighthouse/jwt.hex
+        target: /root/.ethereum/geth/jwtsecret
         read_only: true
     command:
       - lighthouse
-      - bn
+      - beacon_node
       - --network=mainnet
       - --execution-endpoint=http://geth:8551
-      - --execution-jwt=/root/.lighthouse/jwt.hex
+      - --execution-jwt=/root/.ethereum/geth/jwtsecret
       - --checkpoint-sync-url=https://sync-mainnet.beaconcha.in
       - --checkpoint-sync-url-timeout=300
       - --disable-deposit-contract-sync
@@ -76,6 +76,4 @@ services:
       - --debug-level=info
       - --http
       - --http-address=0.0.0.0
-      - --http-api=lighthouse,eth
-      - --http-port=5052
-      - --http-allow-sync-stalled
+
